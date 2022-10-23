@@ -2,10 +2,15 @@
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        twitter: '#00ADED',
+        TweetBoxIconHover: '#1d9bf01a'
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 }
