@@ -11,7 +11,7 @@ export default {
     {
       name:'blockTweet',
       title:'Block Tweet',
-      description:'stuff',
+      description:'Blocking Tweet',
       type: 'boolean'
     },
     {
@@ -28,9 +28,13 @@ export default {
       name:'image',
       title:'Tweet Image',
       type: 'string'
+    },
+    {
+      name: 'displayName',
+      title: 'Display Name',
+      type: 'string'
+
     }
 
-
-  
   ]
 }

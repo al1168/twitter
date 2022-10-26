@@ -9,8 +9,13 @@ module.exports = {
       colors: {
         twitter: '#00ADED',
         TweetBoxIconHover: '#1d9bf01a'
+      },
+      fontFamily: {
+        chirp: ['chrip']
       }
     }
   },
-  plugins: []
+  plugins: [
+    require('tailwind-scrollbar-hide')
+  ]
 }
