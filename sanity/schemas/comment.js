@@ -33,7 +33,7 @@ export default {
       },
     },
     {
-      name: 'displayname',
+      name: 'displayName',
       title: 'Display Name',
       type: 'string',
     },

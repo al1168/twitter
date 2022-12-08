@@ -6,8 +6,6 @@ import { groq } from 'next-sanity';
 import { sanityClient } from '../../sanity';
 //  API ENDPOINT TO GET TWEETS
 
-
-
 const CommentQuery = groq`
 *[_type == 'comment' && references(*[_type == 'tweet' && _id == $tweetId]._id)]{
     _id,
@@ -18,9 +16,9 @@ type Data = {
   comments: Comment[];
 };
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
-  const {tweetId} = req.query
-//   console.log(`this is resQuery${tweetId}`)
-  console.log(`INSIDE GET COMMENTS: ${tweetId}`)
-  const comments: Comment[] = await sanityClient.fetch(CommentQuery,{tweetId});
+  const { tweetId } = req.query;
+  //   console.log(`this is resQuery${tweetId}`)
+  console.log(`INSIDE GET COMMENTS: ${tweetId}`);
+  const comments: Comment[] = await sanityClient.fetch(CommentQuery, { tweetId });
   res.status(200).json({ comments });
 }
