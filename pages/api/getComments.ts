@@ -18,7 +18,7 @@ type Data = {
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
   const { tweetId } = req.query;
   //   console.log(`this is resQuery${tweetId}`)
-  console.log(`INSIDE GET COMMENTS: ${tweetId}`);
+  // console.log(`INSIDE GET COMMENTS: ${tweetId}`);
   const comments: Comment[] = await sanityClient.fetch(CommentQuery, { tweetId });
   res.status(200).json({ comments });
 }

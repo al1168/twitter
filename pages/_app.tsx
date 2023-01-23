@@ -6,8 +6,8 @@ import { ImgurClient } from 'imgur';
 import { RecoilRoot } from 'recoil';
 function MyApp({ Component, pageProps: { ...pageProps } }: AppProps<{ session: Session }>) {
   // console.log('hello');
-  console.log(pageProps);
-  console.log(pageProps.session);
+  // console.log(pageProps);
+  // console.log(pageProps.session);
   return (
     <RecoilRoot>
       <SessionProvider session={pageProps.session}>
